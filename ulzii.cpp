@@ -73,6 +73,7 @@ void find_path()
 // Зургийг зурах буюу дэлгэцэнд харуулах функц
 void display() 
 {
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
     glLoadIdentity();
     gluOrtho2D(-400, 400, -400, 400);
@@ -81,7 +82,7 @@ void display()
     glRotatef(135, 0, 0, 1);  
 
     glBegin(GL_LINE_STRIP);
-    glColor3f(1.0f, 1.0f, 1.0f);
+    glColor3f(0.0f, 0.0f, 0.0f);
     for (auto [x, y] : path) 
         glVertex2d(x, y);
     glEnd();
